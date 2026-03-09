@@ -7,9 +7,10 @@ All prices in USD.
 Provider coverage
 -----------------
   anthropic  — Claude 4.x / 3.x series
-  openai     — GPT-4o, GPT-4o-mini, GPT-4-turbo
-  google     — Gemini 1.5 Pro / Flash, Gemini 2.0 Flash
-  bedrock    — Amazon Bedrock pass-through for Claude / Titan
+  openai     — GPT-4o, GPT-4o-mini, GPT-4-turbo, o1, o1-mini, o3-mini, GPT-3.5-turbo
+  microsoft  — Azure OpenAI (GPT-4o, GPT-4o-mini), Phi-3.5-mini, Phi-4
+  google     — Gemini 1.0 Pro, 1.5 Pro / Flash, 2.0 Flash / Flash-Lite
+  bedrock    — Amazon Bedrock pass-through for Claude / Titan / Llama
 """
 
 from typing import Dict, List, Optional
@@ -167,8 +168,47 @@ PROVIDER_PRICING: Dict[str, Dict[str, Dict]] = {
             "output_per_million": 4.40,
             "context_window":     200_000,
         },
+        "o1-mini": {
+            "input_per_million":  1.10,
+            "output_per_million": 4.40,
+            "context_window":     128_000,
+        },
+        "gpt-3.5-turbo": {
+            "input_per_million":  0.50,
+            "output_per_million": 1.50,
+            "context_window":     16_000,
+        },
+    },
+    "microsoft": {
+        # Azure OpenAI — powers GitHub Copilot and Microsoft Copilot
+        "azure-gpt-4o": {
+            "input_per_million":  2.50,
+            "output_per_million": 10.00,
+            "context_window":     128_000,
+        },
+        "azure-gpt-4o-mini": {
+            "input_per_million":  0.165,
+            "output_per_million": 0.66,
+            "context_window":     128_000,
+        },
+        # Microsoft Phi small language models
+        "phi-3.5-mini": {
+            "input_per_million":  0.13,
+            "output_per_million": 0.52,
+            "context_window":     128_000,
+        },
+        "phi-4": {
+            "input_per_million":  0.125,
+            "output_per_million": 0.50,
+            "context_window":     16_000,
+        },
     },
     "google": {
+        "gemini-1.0-pro": {
+            "input_per_million":  0.50,
+            "output_per_million": 1.50,
+            "context_window":     32_000,
+        },
         "gemini-1.5-pro": {
             "input_per_million":  1.25,   # up to 128k; 2.50 above 128k
             "output_per_million": 5.00,

@@ -430,8 +430,9 @@ pytest tests/ -v
 | Provider | Models |
 |----------|--------|
 | Anthropic | claude-opus-4-6, claude-sonnet-4-6, claude-haiku-4-5 |
-| OpenAI | gpt-4o, gpt-4o-mini, gpt-4-turbo, o1, o3-mini |
-| Google | gemini-1.5-pro, gemini-1.5-flash, gemini-2.0-flash, gemini-2.0-flash-lite |
+| OpenAI (ChatGPT) | gpt-4o, gpt-4o-mini, gpt-4-turbo, o1, o1-mini, o3-mini, gpt-3.5-turbo |
+| Microsoft (Copilot) | azure-gpt-4o, azure-gpt-4o-mini, phi-3.5-mini, phi-4 |
+| Google (Gemini) | gemini-1.0-pro, gemini-1.5-pro, gemini-1.5-flash, gemini-2.0-flash, gemini-2.0-flash-lite |
 | AWS Bedrock | bedrock-claude-sonnet-4-6, bedrock-claude-haiku-4-5, bedrock-titan-text-premier, bedrock-llama-3-70b |
 
 All prices are sourced from each provider's published rates (USD per million tokens) and can be overridden with `--json` output piped into custom tooling.
