@@ -1,0 +1,16 @@
+Write a Python function to parse and validate a JSON config file.
+
+Requirements:
+- Check all required fields are present
+- Validate value types and ranges
+- Return a list of errors (don't raise)
+- Support nested structures
+- Include type hints and docstrings
+
+Config schema:
+- database: host (str), port (1024-65535), name (str), user (str), password (str)
+- server: host (str), port (1024-65535), debug (bool), workers (1-32)
+- logging: level (DEBUG/INFO/WARNING/ERROR), file (str), max_size_mb (1-10000), backup_count (0-20)
+- features: enable_cache (bool), cache_ttl_seconds (1-86400), rate_limit_per_minute (1-10000)
+
+Include unit tests covering valid config, missing fields, wrong types, and out-of-range values.

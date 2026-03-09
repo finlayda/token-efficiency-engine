@@ -1,0 +1,55 @@
+Hello! I hope you are doing well today. I would like to ask you for your assistance with something that I'm currently working on. I need your help with a task that involves writing some Python code. I want you to please create a function for me.
+
+What I want you to do is write a Python function that can be used to parse a JSON configuration file and validate its contents. In order to do this properly, the function should check for the following things. The function should make sure that all required fields are present in the configuration. It should also ensure that the data types of the values are correct and match what is expected. Furthermore, it should additionally check that the values fall within acceptable ranges or match allowed values. Moreover, the function should provide clear error messages when validation fails so that users can understand what went wrong.
+
+Please note that it is important to note that this function will be used in a production environment, so please make sure to handle edge cases properly. Could you please also make sure to add proper error handling throughout the function?
+
+Here is an example of what the configuration file might look like:
+
+{
+    "database": {
+        "host": "localhost",
+        "port": 5432,
+        "name": "mydb",
+        "user": "admin",
+        "password": "secret"
+    },
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8080,
+        "debug": false,
+        "workers": 4
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "/var/log/app.log",
+        "max_size_mb": 100,
+        "backup_count": 5
+    },
+    "features": {
+        "enable_cache": true,
+        "cache_ttl_seconds": 300,
+        "rate_limit_per_minute": 60
+    }
+}
+
+And here is another example showing what an invalid configuration might look like, in order to give you more context about what kind of validation should happen:
+
+{
+    "database": {
+        "host": "",
+        "port": 99999,
+        "name": "mydb"
+    },
+    "server": {
+        "port": "not_a_number",
+        "debug": "yes",
+        "workers": -1
+    }
+}
+
+Please make sure that the function returns a list of validation errors rather than raising exceptions, in order to allow callers to collect all errors at once. Additionally, please make sure to include type hints throughout the function. Furthermore, please make sure to add comprehensive docstrings. Also, it is worth noting that the function should be able to handle nested configuration structures.
+
+Please remember to also include unit tests for the function. Could you please make sure the tests cover both valid and invalid configurations? In addition to this, it would be really helpful if you could add tests for edge cases as well.
+
+Please provide the complete implementation along with all tests. Thank you so much for your help with this!

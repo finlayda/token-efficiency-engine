@@ -1,0 +1,5 @@
+click>=8.1
+rich>=13.0
+tiktoken>=0.7
+# Optional — needed only for monitor-session with real API streaming:
+# anthropic>=0.40

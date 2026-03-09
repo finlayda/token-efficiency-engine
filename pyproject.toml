@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-token-toolkit"
+version = "2.0.0"
+description = "LLM FinOps & Prompt Optimization Platform for Claude Code workflows"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Claude Code" }]
+keywords = ["claude", "llm", "token", "cost", "optimization", "anthropic"]
+
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+    "tiktoken>=0.7",
+]
+
+[project.optional-dependencies]
+# Real API streaming: pip install claude-token-toolkit[api]
+api = ["anthropic>=0.40"]
+dev = ["pytest>=7.0", "pytest-cov"]
+all = ["anthropic>=0.40"]
+
+[project.scripts]
+claude-toolkit = "claude_toolkit.cli_interface.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["claude_toolkit*"]
