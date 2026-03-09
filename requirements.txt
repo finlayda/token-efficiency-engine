@@ -1,8 +1,8 @@
 click>=8.1
 rich>=13.0
 tiktoken>=0.7
+streamlit>=1.32
+plotly>=5.18
+pandas>=1.3
 # Optional — needed only for monitor-session with real API streaming:
 # anthropic>=0.40
-# Optional — needed only for the Streamlit UI:
-# streamlit>=1.32
-# plotly>=5.18
