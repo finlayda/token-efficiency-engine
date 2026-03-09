@@ -1,5 +1,7 @@
 # Claude Token Toolkit
 
+[![Tests](https://github.com/finlayda/token-efficiency-engine/actions/workflows/tests.yml/badge.svg)](https://github.com/finlayda/token-efficiency-engine/actions/workflows/tests.yml)
+
 > LLM FinOps & Prompt Optimization Platform for Claude Code workflows.
 
 Analyse token usage, reduce prompt costs, detect caching opportunities, and monitor live spend — all from the CLI or a local JSON API.
