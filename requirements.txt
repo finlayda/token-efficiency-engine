@@ -3,3 +3,6 @@ rich>=13.0
 tiktoken>=0.7
 # Optional — needed only for monitor-session with real API streaming:
 # anthropic>=0.40
+# Optional — needed only for the Streamlit UI:
+# streamlit>=1.32
+# plotly>=5.18

@@ -22,7 +22,8 @@ dependencies = [
 # Real API streaming: pip install claude-token-toolkit[api]
 api = ["anthropic>=0.40"]
 dev = ["pytest>=7.0", "pytest-cov"]
-all = ["anthropic>=0.40"]
+ui = ["streamlit>=1.32", "plotly>=5.18"]
+all = ["anthropic>=0.40", "streamlit>=1.32", "plotly>=5.18"]
 
 [project.scripts]
 claude-toolkit = "claude_toolkit.cli_interface.cli:main"
